@@ -7,7 +7,7 @@ var concat = require('gulp-concat');
 
 var htmlSources = ['*.html'],
     sassSources = ['include/css/*scss'],
-    jsSources   = ['include/cs/*js'];
+    jsSources   = ['include/js/*js'];
 
 
 gulp.task('connect', function() {
@@ -32,11 +32,12 @@ gulp.task('js', function() {
   gulp.src(jsSources)
   .pipe(uglify())
   .pipe(concat('script.js'))
-  .pipe(gulp.dest(outputDir))
+  .pipe(gulp.dest('include/js/'))
   .pipe(connect.reload())
 });
 
 gulp.task('watch', function() {
   gulp.watch(jsSources, ['js']);
   gulp.watch(sassSources, ['sass']);
+//    gulp.watch(log);
 });
