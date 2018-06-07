@@ -31,7 +31,7 @@ gulp.task('sass', function() {
 gulp.task('js', function() {
   gulp.src(jsSources)
   .pipe(uglify())
-  .pipe(concat('script.js'))
+  .pipe(concat('tovar_scripts.js'))
   .pipe(gulp.dest('include/js/'))
   .pipe(connect.reload())
 });

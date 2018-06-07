@@ -28,15 +28,17 @@ $(document).ready(function() {
 
     $(window).on('scroll', function(event) {
         var heroH = $('#hero').height(),
-            elevatorBtn = $('#elevatorBtn');
+            elevatorBtn = $('#elevatorBtn'), navbar = $('#navList');
         console.log(heroH);
-        if ( $(this).scrollTop() >= heroH ) {
+        if ( $(this).scrollTop() >= heroH - 1 ) {
             dots.addClass('scrolled');
             menuItem.addClass('darken');
+            navbar.addClass('scrolled');
             elevatorBtn.fadeIn('slow');
         } else {
             dots.removeClass('scrolled');
             menuItem.removeClass('darken');
+            navbar.removeClass('scrolled');
             elevatorBtn.fadeOut('slow');
         }
     });
@@ -46,45 +48,47 @@ $(document).ready(function() {
             scrollTop: '0' + '10px'
         }, 250);
     });
-    
-    // Select all links with hashes
 $('a[href*="#"]')
-  // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
   .click(function(event) {
-    // On-page links
     if (
       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
       && 
       location.hostname == this.hostname
     ) {
-      // Figure out element to scroll to
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
       if (target.length) {
-        // Only prevent default if animation is actually gonna happen
         event.preventDefault();
         $('html, body').animate({
           scrollTop: target.offset().top
         }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
           var $target = $(target);
           $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
+          if ($target.is(":focus")) {
             return false;
           } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
+            $target.attr('tabindex','-1');
+            $target.focus();
           };
         });
       }
     }
   });
     
-
+    var moreBtn = $('button.more-button');
+    
+    moreBtn.each(function() {
+       $(this).on('click', function(event) {
+//           $(this).addClass('close').siblings('div').addClass('down');
+           if ( $(this).hasClass('close') ) {
+               $(this).removeClass('close').siblings('div').removeClass('down');
+           } else {
+               $(this).addClass('close').siblings('div').addClass('down');
+           }
+       });
+    });
 
 
 });
