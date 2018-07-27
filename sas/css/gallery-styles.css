@@ -1,0 +1,104 @@
+div.gallery-top {
+    width: 100%;
+    display: block;
+    position: relative;
+    float: left;
+    overflow: auto;
+}
+
+    div.sample-wrap {
+        width: 90%;
+        display: block;
+        margin: 10em auto 0 auto;
+        background-color: white;
+    }
+
+        div.student-work {
+            background-color: rgba(26,31,27,1);
+            color: rgb(217,255,192);
+        }
+
+            h1.st-title {
+                padding-top: 1em;
+                letter-spacing: .1em;
+                line-height: 1em;
+            }
+
+            p.st-intro {
+                color: white;
+                font-family: antic, sans-serif;
+                letter-spacing: .1em;
+                font-size: 1.5em;
+            }
+        
+        div.video-g {
+            width: 25%;
+            height: 15em;
+            display: block;
+            position: relative;
+            float: left;
+        }
+
+            div.vid-descr {
+                display: block;
+                font-size: .9em;
+                opacity: 0;
+                width: 96%;
+                height: 16em;
+                color: gray;
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 2%;
+                line-height: 1.25em;
+                background-color: rgb(217,255,192);
+                transition: opacity .25s ease-in-out;
+                -moz-transition: opacity .25s ease-in-out;
+                -webkit-transition: opacity .25s ease-in-out;
+                -o-transition: opacity .25s ease-in-out;
+                font-family: antic, sans-serif;
+                overflow: hidden;
+            }
+
+                .vid-descr:hover {
+                    opacity: .85;
+                }
+
+                img.close {
+                    display: block;
+                    cursor: pointer;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+
+
+/*------------@MEDIA STYLES-------------------------------*/
+
+@media screen and (max-width: 959px) {
+    
+    div.gallery-top {
+        display: none;   
+    }
+    
+    
+    div.sample-wrap {
+        margin: 1em auto 0   
+    }
+    
+        h1.st-title {
+            padding-top: 0;   
+        }
+    
+        div.video-g {
+            width: 100%;   
+        }
+    
+            div.vid-descr {
+                display: none;   
+            }
+    
+    
+    
+    
+}

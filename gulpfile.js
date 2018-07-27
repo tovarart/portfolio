@@ -28,16 +28,9 @@ gulp.task('sass', function() {
   .pipe(gulp.dest('include/css/'))
 });
 
-gulp.task('js', function() {
-  gulp.src(jsSources)
-  .pipe(uglify())
-  .pipe(concat('tovar_scripts.js'))
-  .pipe(gulp.dest('include/js/'))
-  .pipe(connect.reload())
-});
-
 gulp.task('watch', function() {
-  gulp.watch(jsSources, ['js']);
+    
+//  gulp.watch(htmlSources, ['connect']);
   gulp.watch(sassSources, ['sass']);
-//    gulp.watch(log);
+//  gulp.watch(log);
 });

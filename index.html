@@ -9,16 +9,103 @@
     <meta name="Description" content="Portfolio website for Art Tovar" />
     <meta name="Keyword" content="Art Tovar, tovar, art tovar, Arturo Tovar" />
     <link rel="stylesheet" media="screen" href="include/css/normalize.css" type="text/css" />
+    <link rel="stylesheet" media="screen" href="include/css/owl.carousel.css" type="text/css" />
+    <link rel="stylesheet" media="screen" href="include/css/owl.theme.default.css" type="text/css" />
     <link rel="stylesheet" media="screen" href="include/css/styles.css" type="text/css" />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,700,900|Nunito+Sans:400,400i,500,700,700i" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,700,900|Nunito+Sans:400,400i,500,700,700i" rel="stylesheet">
 </head>
-
 <body id="top">
     <main role="main">
+        <div id="overlay" class="overlay hide">
+          <div id="hartfordline" class="media-box" index="0">
+              <button class="close" type="button" index="0">
+                  Close
+              </button>
+              <div class="slider owl-carousel owl-theme">
+                <div class="item slide">
+                    <img src="/images/ui-ux-images/wireframe1.jpg" alt="">
+                    <p>Initial wireframe concept for Twitter feed layout</p>
+                </div>
+                <div class="item slide">
+                  <img src="/images/ui-ux-images/wireframe2.jpg" alt="">
+                  <p>Initial wireframe concept for Twitter feed layout</p>
+                </div>
+                <div class="item slide">
+                  <img src="/images/ui-ux-images/hl-mobile-proto.jpg" alt="">
+                  <p>Initial wireframe concept for Twitter feed layout</p>
+                </div>
+            </div>
+          </div>
+          <div id="chsra" class="media-box" index="0">
+              <button class="close" type="button" index="0">
+                  Close
+              </button>
+              <div class="slider owl-carousel owl-theme">
+                <div class="item slide">
+                  <img src="/images/ui-ux-images/chsra-wireframeA.jpg" alt="">
+                  <p>Initial wireframe for element layout</p>
+                </div>
+                <div class="item slide">
+                  <img src="/images/ui-ux-images/chsra-wireframeB.jpg" alt="">
+                  <p>Initial wireframe concept for element layout</p>
+                </div>
+                <div class="item slide">
+                  <img src="/images/ui-ux-images/chsra-wireframeC.jpg" alt="">
+                  <p>Wireframe for mapping defaulted elements</p>
+                </div>
+                <div class="item slide">
+                  <img src="/images/ui-ux-images/chsra-wireframeD.jpg" alt="">
+                  <p>Wireframe for mapping defaulted elements</p>
+                </div>
+                <div class="item slide">
+                  <img src="/images/ui-ux-images/chsra-wireframeE.jpg" alt="">
+                  <p>Wireframe for mapping defaulted elements</p>
+                </div>
+                <div class="item slide">
+                  <img src="/images/ui-ux-images/chsra-proto-tabs-mob.jpg" alt="">
+                  <p>Prototype for mobile view</p>
+                </div>
+                <div class="item slide">
+                  <img src="/images/ui-ux-images/chsra-proto-tabs-tab.jpg" alt="">
+                  <p>Prototype for tablet/portrait view</p>
+                </div>
+                <div class="item slide">
+                  <img src="/images/ui-ux-images/chsra-proto-tabs-desk.jpg" alt="">
+                  <p>Prototype for tablet/landscaped and desktop view</p>
+                </div>
+                <div class="item slide">
+                  <img src="/images/ui-ux-images/chsra-proto-tabs-full.jpg" alt="">
+                  <p>Prototype for tab layout</p>
+                </div>
+            </div>
+          </div>
+          <div id="sas" class="media-box" index="0">
+              <button class="close" type="button" index="0">
+              Close
+              </button>
+              <div class="slider owl-carousel owl-theme">
+                  <div class="item slide">
+                      <img src="/images/ui-ux-images/sas-wireframeA.jpg" alt=""><p>Wireframe for Student Animation Society home page element layout</p>
+                  </div>
+                  <div class="item slide">
+                      <img src="/images/ui-ux-images/sas-mobile-mock.jpg" alt="">
+                      <p>Mobile mockup concept for Student Animation Society</p>
+                  </div>
+                  <div class="item slide">
+                      <img src="/images/ui-ux-images/sas-home-mock.jpg" alt="">
+                      <p>Desktop mockup concept for Student Animation Society</p>
+                  </div>
+              </div>
+        </div>
+      </div>
         <header>
+            <div class="logo-wrapper">
+                <a href="/" class="logo-link">
+                    Art Tovar
+                    <span>UI/UX Design + <span>Development</span></span>
+                </a>
+            </div>
             <nav class="main-nav">
                 <button id="menu" type="button" index="0">
                     <span class="first"></span>
@@ -28,59 +115,43 @@
                 </button>
                 <div id="navList" class="nav-list">
                     <ul>
-                        <li><a href="#portfolio">Work</a>
+                        <li>
+                            <a href="#portfolio">Portfolio</a>
                         </li>
-                        <li><a href="#about">About</a>
+                        <li>
+                            <a href="#about">About</a>
                         </li>
-                        <li><a href="#contact">Contact</a>
+                        <li>
+                            <a href="#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </header>
-        <section id="hero" class="hero">
-            <div class="section-inner">
-                <div class="hero-inter">
-                    <div class="inter-backg-ribs"></div>
-                </div>
-                <div class="hero-text">
-                    <p class="title white-text">Art Tovar</p>
-                    <p class="slogan">
-                        <span class="aqua-green-text">Web Design</span>
-                        <span class="aqua-blue-text">+</span>
-                        <span class="orange-text">Front End Development</span>
-                    </p>
-                </div>
-                <div class="shortcuts">
-                    <a href="mailto:tovarart@gmail.com">Email Me</a>
-                    <a href="tel:+13036688721">+1.303.668.8721</a>
-                </div>
-            </div>
-        </section>
         <section id="portfolio" class="first">
             <div class="section-inner">
                 <div class="intro">
-                    <h1>Work.</h1>
-                    <p>Collection of projects (personal and professional) I had a role in developing.</p>
+                    <h1>Portfolio</h1>
+                    <p>
+                        <span>Selected Works</span>
+                        Below is a collection of web projects I've had the opportnity to work on. The projects are not necessarily in chronologial orderm but the most recent projects start at the top.
+                    </p>
                 </div>
             </div>
             <div class="content">
+                <h2>Web</h2>
                 <div class="grid">
-
                     <div class="item hartfordline">
-
                         <button type="button" class="more-button">
                             <span></span>
                             More Information
                         </button>
-
                         <div class="item-inner">
                             <div class="textbox">
                                 <h3>Hartford Line</h3>
                                 <h4>Responsive Design&nbsp;-&nbsp;Interaction Design&nbsp;-&nbsp;Front End Development&nbsp;-&nbsp;WAI-ARIA/Section 508</h4>
                             </div>
                         </div>
-
                         <div class="details">
                             <div class="detail-box">
                                 <p class="title">Hartford Line</p>
@@ -94,16 +165,18 @@
                                         Responsive Design, Interaction Design, Front End Development, WAI-ARIA/Section 508, Kendo UI
                                     </p>
                                     <p class="description">
-                                        <span>Description:</span>
                                         <span>Description:&nbsp;</span>WSP was tasked to create an online presence to communicate updates, allow users to research fares and times for a new rail service in along the I-91 corridor in Hartford CT.
                                     </p>
-                                    <a href="http://www.hartfordline.com/" target="_blank" tabindex="0">View Website</a>
+                                    <div class="addl-media">
+                                        <a href="http://www.hartfordline.com/" target="_blank" tabindex="0">View Website</a>
+                                        <button data-id="hartfordline" class="more-media" type="button">
+                                            UI/UX Process
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
                     </div><!-- END HARTFORDLINE -->
-
                     <div class="item chsra">
                         <button type="button" class="more-button">
                             <span></span>
@@ -128,13 +201,21 @@
                                         Responsive Design, Interaction Design, Front End Development, WAI-ARIA/Section 508
                                     </p>
                                     <p class="description">
-                                        <span>Description:&nbsp;</span>The California High-Speed Rail Authority asked to have a new, more modern website created that could adhere to Section 508 standards while ensuring all of the current content was migrated. The UI/UX design called for a "mega-menu" to capture all navigation to the improved site architecture.<br>I took the approach of developing this site interface using NVDA as a guide to improve accessibility and  researching the proper use of WAI-ARIA.<br><strong>Site currently in development.</strong></p>
-                                    <a href="https://hsrpreview.wspis.com/" target="_blank" tabindex="0">View Website</a>
+                                        <span>Description:&nbsp;</span>The California High-Speed Rail Authority asked to have a new, more modern website created that could adhere to Section 508 standards while ensuring all of the current content was migrated. The UI/UX design called for a "mega-menu" to capture all navigation to the improved site architecture.
+                                        <br>I took the approach of developing this site interface using NVDA as a guide to improve accessibility and  researching the proper use of WAI-ARIA.
+                                        <br>
+                                        <strong>Site currently in development.</strong>
+                                    </p>
+                                    <div class="addl-media">
+                                        <a href="https://hsrpreview.wspis.com/" target="_blank" tabindex="0">View Website</a>
+                                        <button data-id="chsra" class="more-media" type="button">
+                                            UI/UX Process
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div><!-- END CHSRA -->
-
                     <div class="item maine">
                         <button type="button" class="more-button">
                             <span></span>
@@ -159,14 +240,14 @@
                                         Responsive Design, UI Interaction, Front End Development, SVG, parallax
                                     </p>
                                     <p class="description">
-                                        <span>Description:&nbsp;</span>Website designed and built for the Cities of Portland and South Portland along with the Portland Area Comprehensive Transportation System (PACTS).<br>Our team was tasked to create a website to serve as a communication and outreach tool.</p>
+                                        <span>Description:&nbsp;</span>Website designed and built for the Cities of Portland and South Portland along with the Portland Area Comprehensive Transportation System (PACTS).
+                                        <br>Our team was tasked to create a website to serve as a communication and outreach tool.
+                                    </p>
                                     <a href="http://www.mainesmartcorridor.com/" target="_blank" tabindex="0">View Website</a>
                                 </div>
                             </div>
                         </div>
-
                     </div><!-- END MAINE -->
-
                     <div class="item hsr-invest">
                         <button type="button" class="more-button">
                             <span></span>
@@ -191,13 +272,13 @@
                                         Responsive Design, UI Interaction, Front End Development
                                     </p>
                                     <p class="description">
-                                        <span>Description:&nbsp;</span>A single-page website with the sole purpose of communicating the positive impacts of the California High Speed Rail Project.</p>
+                                        <span>Description:&nbsp;</span>A single-page website with the sole purpose of communicating the positive impacts of the California High Speed Rail Project.
+                                    </p>
                                     <a href="https://buildhsr.com/hsrinvestment/" target="_blank" tabindex="0">View Website</a>
                                 </div>
                             </div>
                         </div>
                     </div><!-- END HSR-INVESTMENT -->
-
                     <div class="item instep">
                         <button type="button" class="more-button">
                             <span></span>
@@ -222,16 +303,21 @@
                                         Responsive Design, Interaction Design, Bootstrap, Kendo UI
                                     </p>
                                     <p class="description">
-                                        <span>Description:&nbsp;</span>Our lead developer was tasked to create an evaluation tool that was to be used internally via the National Park Service.<br>I assisted with further developing the responsive and interaction design of the INSTEP project.<br>
-                                        Demo Login &amp; Password:<br>
-                                        <strong>Login:</strong>&nbsp;NpsSystemAdmin<br>
-                                        <strong>Password:</strong>&nbsp;InstepTesting33!</p>
+                                        <span>Description:&nbsp;</span>Our lead developer was tasked to create an evaluation tool that was to be used internally via the National Park Service.
+                                        <br>I assisted with further developing the responsive and interaction design of the INSTEP project.
+                                        <br>
+                                        Demo Login &amp; Password:
+                                        <br>
+                                        <strong>Login:</strong>&nbsp;NpsSystemAdmin
+                                        <br>
+                                        <strong>Password:</strong>&nbsp;InstepTesting33!
+                                    </p>
                                     <a href="http://demo1.wspis.com/" target="_blank" tabindex="0">View Website</a>
                                 </div>
                             </div>
                         </div>
                     </div><!-- END INSTEP -->
-                    
+
                     <div class="item cu-emp">
                         <button type="button" class="more-button">
                             <span></span>
@@ -245,7 +331,7 @@
                         </div>
                         <div class="details">
                             <div class="detail-box">
-                                <p class="title">Engineering Management Program - CU Boulder</p>
+                                <p class="title">EMP - CU Boulder</p>
                                 <div class="detail-text">
                                     <p class="client">
                                         <span>Project:</span>
@@ -255,60 +341,126 @@
                                         <span class="role">Role:</span>
                                         Drupal Development, Web Design, Asset Creation
                                     </p>
-                                    <p class="description">I was hired to migrate all content from the existing site to the new Drupal platform. All media was created new and I worked closely with the Marketing Manager to ensure the new website design adhered to CU Boulder's design standards.<br></p>
+                                    <p class="description">
+                                        I was hired to migrate all content from the existing site to the new Drupal platform. All media was created new and I worked closely with the Marketing Manager to ensure the new website design adhered to CU Boulder's design standards.
+                                        <br>
+                                    </p>
                                     <a href="https://www.colorado.edu/emp/" target="_blank" tabindex="0">View Website</a>
                                 </div>
                             </div>
                         </div>
                     </div><!-- END CU EMP -->
+                    
+                    <div class="item sas">
+                        <button type="button" class="more-button">
+                            <span></span>
+                            More Information
+                        </button>
+                        <div class="item-inner">
+                            <div class="textbox">
+                                <h3>Student Animation Society</h3>
+                                <h4>UI/UX Design&nbsp;-&nbsp;Web Design&nbsp;-&nbsp;Front End Development</h4>
+                            </div>
+                        </div>
+                        <div class="details">
+                            <div class="detail-box">
+                                <p class="title">Student Animation Society</p>
+                                <div class="detail-text">
+                                    <p class="client">
+                                        <span>Project:</span>
+                                        Student Animation Society - Outreach, Informative and Recruiting Website
+                                    </p>
+                                    <p class="role">
+                                        <span class="role">Role:</span>
+                                        UI/UX Design, Web Design, Front End Development
+                                    </p>
+                                    <p class="description">
+                                        The Student Animation Society is a student organization at University of Colorado at Denver for students interested in animation and the animation industry.
+                                        
+                                        <br>
+                                    </p>
+                                    <div class="addl-media">
+                                        <button data-id="sas" class="more-media" type="button">
+                                            UI/UX and Design Process
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- END SAS -->
+                    
+                </div>
+                <h2>Graphic</h2>
+                <div class="grid">
 
-                </div>
-            </div>
-        </section>
-        <section id="about" class="second">
-            <div class="section-inner">
-                <div class="about" >
-                     <h1>About.</h1>
-                    <p>I consider myself a talented designer and a knowledgeable developer of digital experiences. I sincerely enjoy learning about the web industry and delight in creating pleasant and accessible experiences for all to enjoy. My inspirations are drawn from a variety of sources and influences.</p>
-                </div>
-            </div>
-            <div class="content" >
-                <div class="about-section">
-                     <h2>Process</h2>
-                    <p>My process is ever evolving and with each project I make effort to learn something new.</p>
-                    <p>Throughout my career, I’ve compiled my process to these main steps: Learn, Prototyping, Design, Deliver and Learn Some More.</p>
-                </div>
-                <div class="about-section">
-                     <h3>Learning</h3>
-                    <p>With every project I learn as much as possible about the client requirements. Things like demographics, purpose and function, goals and flow are items I like to learn about as early in the project as possible. High-level concepts tend to form the base of the project and how the project materializes so I find it most efficient to learn these items early on.</p>
-                    <p>I perform as much research as possible in tandem with the learning stage, outlining any objectives and solutions that may help achieve our goal. Objectives: Sitemaps, Map User Flow, User Persona </p>
+                    <div class="item vive-slim">
+                        <button type="button" class="more-button">
+                            <span></span>
+                            More Information
+                        </button>
+                        <div class="item-inner">
+                            <div class="textbox">
+                                <h3>Vive Slim</h3>
+                                <h4>Package Design</h4>
+                            </div>
+                        </div>
+                        <div class="details">
+                            <div class="detail-box">
+                                <p class="title">Vive Natural</p>
+                                <div class="detail-text">
+                                    <p class="client">
+                                        <span>Project:</span>
+                                        Student Animation Society - Outreach, Informative and Recruiting Website
+                                    </p>
+                                    <p class="role">
+                                        <span class="role">Role:</span>
+                                        UI/UX Design, Web Design, Front End Development
+                                    </p>
+                                    <p class="description">
+                                        The Student Animation Society is a student organization at University of Colorado at Denver for students interested in animation and the animation industry.
+                                        
+                                        <br>
+                                    </p>
+                                    <div class="addl-media">
+                                        <a href="/sas/index.html" target="_blank" tabindex="0">View Website</a>
+                                        <button data-id="sas" class="more-media" type="button">
+                                            UI/UX Process
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- END SAS -->
+                    
                 </div>
                 
-                <div class="about-section">
-                     <h3>Wireframing and Prototyping</h3>
-                    <p>Wireframing for me starts with quick and simple drawings. I create numerous thumbnails in the attempt to build out multiple solutions to singular objective. I find the more I sketch, the better the end results are. It allows for exploration of solutions to a main objective without committing to anything specific.</p>
-                    <p>My prototypes are built in a variety of tools; I’m well-versed in a number of programs. A list of software and programs I tend to use are:</p>
-                    <ul class="generic-list" >
-                        <li>PhotoShop</li>
-                        <li>Illustrator</li>
-                        <li>InDesign</li>
-                        <li>Adobe XD</li>
-                        <li>Sketch</li>
-                        <li>InVision</li>
-                        <li>Omnigraffle</li>
-                    </ul>
-                    <p>During the prototyping and wireframing step, I start to seek feedback from project managers, designers and especially other developers (back-end and front-end). I find it crucial to explore solutions with as many teammates as possible.</p>
-                    <p>Objectives: Page Layout, Communicate tech solutions, reveal/solve any issues</p>
-                </div>
-               
+                
             </div>
+        </section>
+        <section id="about" class="third">
+            <div class="section-inner">
+                <div class="about">
+                    <h1>About</h1>
+                    <p>
+                        <span>Selected Works</span>
+                        Below is a collection of web projects I've had the opportnity to work on. The projects are not necessarily in chronologial order but the most recent projects start at the top.<br>
+                        Overall, you'll find I play many roles in the creation of 
+                    </p>
+                </div>
+            </div>
+            <div class="content">
+                <h2>Skills</h2>
+                <div class="grid">
+                </div>
+            </div>
+                
         </section>
         <section id="contact" class="third">
             <div class="section-inner">
-                <div class="contact" >
-                    <h1>Contact.</h1>
+                <div class="contact">
+                    <h1>Contact</h1>
                     <p>
-                        <a href="mailto:tovarart@gmail.com">Email Me</a>
+                        <a href="mailto:me@tovarart.com">Email Me</a>
                         <a href="tel:+13036688721">+1.303.668.8721</a>
                     </p>
                 </div>
@@ -316,12 +468,17 @@
         </section>
     </main>
     <a href="#top" id="elevatorBtn" class="elevator-button" index="-1">Back To Top</a>
-    <footer>
-        
-    </footer>
+    <footer></footer>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="include/js/owl.carousel.min.js"></script>
     <script src="include/js/tovar_scripts.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74237615-1"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag('js', new Date());
+
+gtag('config', 'UA-74237615-1');</script>
+
 </body>
-
 </html>
-

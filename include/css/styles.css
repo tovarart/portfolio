@@ -31,6 +31,13 @@
   100% {
     background-position: 0% 50%; } }
 
+/* OWL CAROUSEL OVERRIDES */
+.owl-theme .owl-nav {
+  display: none !important; }
+
+.owl-item {
+  max-height: 100%; }
+
 /*** GLOBAL CSS ***/
 * {
   -webkit-box-sizing: border-box;
@@ -69,7 +76,7 @@ a:hover {
   font-size: 0;
   background: url(/images/elevator.svg) no-repeat center;
   background-size: contain;
-  z-index: 100; }
+  z-index: 10; }
 
 .elevator-button:hover {
   color: transparent; }
@@ -101,7 +108,8 @@ button {
   margin: 0;
   padding: 0;
   border: 0;
-  background: none; }
+  background: none;
+  cursor: pointer; }
 
 .clearfix {
   zoom: 1; }
@@ -128,15 +136,6 @@ footer {
 .black-text {
   color: #2a2a2a; }
 
-.aqua-green-text {
-  color: #00fe89; }
-
-.aqua-blue-text {
-  color: #00ffff; }
-
-.orange-text {
-  color: #fe8300; }
-
 .generic-list {
   display: block;
   position: relative;
@@ -155,15 +154,85 @@ h1 {
   font-size: 2rem;
   letter-spacing: 2px; }
 
-header {
+main {
+  position: relative;
+  transition: filter .5s ease; }
+
+.overlay {
   position: fixed;
+  right: 50%;
+  top: 0%;
   width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  transform: translateX(50%);
+  transform-origin-x: 50%;
+  transition: width .25s, background .25s; }
+  .overlay.hide {
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    transition: width .25s, background .25s; }
+
+.media-box {
+  display: none;
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  width: 90%;
+  padding: 10px;
+  max-width: 800px;
+  min-height: 20rem;
+  max-height: 82vh;
+  background: #fff;
+  overflow: hidden;
+  overflow-y: auto;
+  transform: translate(50%, 50%);
+  transform-origin: 50% 50%; }
+  .media-box .close {
+    display: block;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 32px;
+    height: 32px;
+    color: transparent;
+    font-size: 0;
+    background: url(/images/close.svg) #2a2a2a no-repeat center;
+    background-size: 16px;
+    z-index: 10; }
+
+.media-box.show {
+  display: block; }
+
+.slider {
+  position: relative;
+  width: 100%; }
+
+.item.slide {
+  display: block;
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+  overflow-y: auto; }
+  .item.slide img {
+    display: block;
+    width: 100%; }
+  .item.slide p {
+    padding: 16px 0; }
+
+header {
+  position: relative;
+  width: 100%;
+  min-height: 72px;
   z-index: 10; }
   header nav {
-    position: relative;
+    position: absolute;
+    display: block;
     width: 100%; }
     header nav button {
-      position: absolute;
+      position: fixed;
       top: 10px;
       right: 8px;
       padding: 16px;
@@ -172,28 +241,24 @@ header {
       font-size: 0;
       color: transparent;
       cursor: pointer;
-      z-index: 10;
+      z-index: 100;
       -webkit-transition: top .25s ease;
       transition: top .25s ease; }
       header nav button span {
         position: absolute;
         bottom: 50%;
         right: 50%;
-        width: 10px;
-        height: 10px;
+        width: 12px;
+        height: 12px;
         border-radius: 50%;
-        background: #fff;
+        background: #18326d;
+        border: 2px solid #fff;
         -webkit-transform-origin: center center;
         transform-origin: center center;
         -webikit-transform: translateX(50%, 50%);
         transform: translate(50%, 50%);
         -webkit-transition: left .25s ease, right .25s ease, width .25s ease, height .25s ease, background .25s linear;
         transition: left .25s ease, right .25s ease, width .25s ease, height .25s ease, background .25s linear; }
-        header nav button span.scrolled {
-          background: #18326d;
-          border: 2px solid #fff;
-          width: 12px;
-          height: 12px; }
         header nav button span.first {
           right: calc(100% - 5px); }
         header nav button span.second:after {
@@ -236,7 +301,7 @@ header {
             -webkit-transform: translate(50%, 50%);
             transform: translate(50%, 50%); }
       header nav button.open ~ .nav-list {
-        top: 0;
+        position: fixed;
         right: 0px;
         width: 100vw;
         height: 100vh;
@@ -245,6 +310,7 @@ header {
         background: #fff;
         overflow: hidden;
         overflow-y: auto;
+        z-index: 99;
         -webkit-transform-origin: top right;
         transform-origin: top right; }
         header nav button.open ~ .nav-list ul li a {
@@ -252,7 +318,7 @@ header {
           font-weight: 700; }
   header .nav-list {
     position: absolute;
-    top: 10px;
+    top: 0;
     right: 25px;
     width: 10px;
     height: 10px;
@@ -281,40 +347,41 @@ header {
           -webkit-transition: color .1s linear;
           transition: color .1s linear; }
 
+.logo-wrapper {
+  display: inline-block;
+  position: relative;
+  left: 0;
+  top: 0; }
+  .logo-wrapper a {
+    display: inline-block;
+    padding: 1rem;
+    font-size: 2rem;
+    font-family: "Muli", sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #2a2a2a; }
+    .logo-wrapper a span {
+      display: block;
+      font-size: 1rem;
+      font-weight: 300;
+      color: #696969; }
+      .logo-wrapper a span span {
+        display: inline-block; }
+
 .hero {
   display: block;
   position: relative;
-  background: #18326d;
   height: 65vh;
-  font-family: "Muli", sans-serif;
-  font-weight: 700; }
+  background: url(/images/hero3.jpg) #18326d no-repeat center 51%;
+  background-size: cover;
+  font-family: "Muli", sans-serif; }
 
 .hero-inter {
   display: block;
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #1481c1;
-  background: linear-gradient(312deg, #18326d 0%, #1481c1 25%, #2f7286 50%, #6b579a 75%, #18326d 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1481c1", endColorstr="#18326d", GradientType=1);
-  background-size: 600% 600%;
-  -webkit-animation: gradientMove 53s ease infinite;
-  animation: gradientMove 103s ease infinite;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
   overflow: hidden; }
-  .hero-inter .inter-backg-ribs {
-    position: absolute;
-    right: 50%;
-    bottom: 50%;
-    width: 200%;
-    height: 100%;
-    overflow: hidden;
-    -webkit-transform: translate(50%, 50%);
-    transform: translate(50%, 50%);
-    background: url(/images/herobg1.png) repeat;
-    background-size: 50px;
-    opacity: .18; }
 
 .hero-text {
   position: relative;
@@ -327,13 +394,17 @@ header {
   .hero-text .title {
     display: block;
     padding: 0;
-    font-size: 2.25rem; }
+    font-weight: 700;
+    font-size: 2.5rem; }
   .hero-text .slogan {
     font-size: 2rem;
-    line-height: 1.3; }
+    line-height: 1.3;
+    font-weight: 200;
+    color: #fff; }
     .hero-text .slogan span:nth-child(2) {
       font-size: 2.75rem;
-      font-weight: 500; }
+      font-weight: 500;
+      color: #00ffff; }
     .hero-text .slogan span:nth-child(3) {
       display: block; }
 
@@ -358,12 +429,12 @@ section:not(.hero) {
   section:not(.hero) .section-inner {
     padding: 2rem 1rem;
     background: #fff;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.35); }
+    box-shadow: 0px 6px 12px -5px rgba(0, 0, 0, 0.35); }
   section:not(.hero) h1 {
     display: block;
     position: relative;
     padding: 1rem 0 3rem 0;
-    font-weight: 900; }
+    font-weight: 500; }
 
 .section-inner h1:after {
   content: '';
@@ -373,18 +444,38 @@ section:not(.hero) {
   width: 50%;
   max-width: 200px;
   height: 2px;
-  background: #00fe89; }
+  background: #00ffff; }
 
 #about .section-inner h1:after {
   background: #00ffff; }
 
 #contact .section-inner h1:after {
-  background: #fe8300; }
+  background: #00ffff; }
+
+.section-inner .intro p span {
+  display: block;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #696969;
+  font-size: .9rem;
+  font-weight: 300;
+  text-transform: uppercase; }
 
 section .content {
   display: block;
   padding: 0 0 1rem 0;
   min-height: 25vh; }
+  section .content h2 {
+    display: block;
+    margin: 1rem auto 0 auto;
+    width: 90%;
+    max-width: 1250px;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    color: #a0a0a0;
+    font-weight: 900;
+    letter-spacing: 1px; }
   section .content .grid {
     display: flex;
     flex-direction: column;
@@ -395,7 +486,7 @@ section .content {
     padding: 0 0 1rem 0;
     margin: 8px auto 0 auto;
     width: 90%;
-    max-width: 1100px; }
+    max-width: 1250px; }
     section .content .grid .item {
       flex: 0 1 350px;
       position: relative;
@@ -403,7 +494,7 @@ section .content {
       background: #fff;
       box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
       overflow: hidden; }
-      section .content .grid .item button {
+      section .content .grid .item > button {
         display: block;
         position: absolute;
         top: 0;
@@ -413,7 +504,7 @@ section .content {
         height: 32px;
         background: #fff;
         z-index: 1; }
-        section .content .grid .item button:before {
+        section .content .grid .item > button:before {
           content: '';
           position: absolute;
           right: 50%;
@@ -424,7 +515,7 @@ section .content {
           transform: translate(50%, 50%);
           transition: transform .5s;
           transition-timing-function: var(--ease-in-quad); }
-        section .content .grid .item button:after {
+        section .content .grid .item > button:after {
           content: '';
           position: absolute;
           right: 50%;
@@ -435,7 +526,7 @@ section .content {
           transform: translate(50%, 50%);
           transition: transform .5s;
           transition-timing-function: var(--ease-in-quad); }
-        section .content .grid .item button.close:after, section .content .grid .item button.close:before {
+        section .content .grid .item > button.close:after, section .content .grid .item > button.close:before {
           transform: translate(50%, 50%) rotate(-135deg); }
       section .content .grid .item .details {
         display: block;
@@ -467,52 +558,68 @@ section .content {
         box-shadow: 2px 9px 16px rgba(0, 0, 0, 0.28), -2px 16px 24px rgba(0, 0, 0, 0.28); }
       section .content .grid .item.hartfordline {
         background: url(/images/hartfordline.jpg) no-repeat left top;
-        background-size: 125%;
+        background-size: 133%;
         transition: background .75s, box-shadow .2s;
         transition-timing-function: var(--ease-in-quad); }
         section .content .grid .item.hartfordline:hover {
           background: url(/images/hartfordline-hover.jpg) no-repeat left top;
-          background-size: 125%; }
+          background-size: 136%; }
       section .content .grid .item.chsra {
         background: url(/images/chsra.jpg) no-repeat left top;
-        background-size: 125%;
+        background-size: 133%;
         transition: background .75s, box-shadow .5s;
         transition-timing-function: var(--ease-in-quad); }
         section .content .grid .item.chsra:hover {
           background: url(/images/chsra-hover.jpg) no-repeat left top;
-          background-size: 125%; }
+          background-size: 136%; }
       section .content .grid .item.maine {
         background: url(/images/maine-smart.jpg) no-repeat left top;
-        background-size: 125%;
+        background-size: 133%;
         transition: background .75s, box-shadow .5s;
         transition-timing-function: var(--ease-in-quad); }
         section .content .grid .item.maine:hover {
           background: url(/images/maine-smart-hover.jpg) no-repeat left top;
-          background-size: 125%; }
+          background-size: 136%; }
       section .content .grid .item.hsr-invest {
         background: url(/images/hsr-investment.jpg) no-repeat center top;
-        background-size: 150%;
+        background-size: 133%;
         transition: background .75s, box-shadow .5s;
         transition-timing-function: var(--ease-in-quad); }
         section .content .grid .item.hsr-invest:hover {
           background: url(/images/hsr-investment-hover.jpg) no-repeat center top;
-          background-size: 150%; }
+          background-size: 136%; }
       section .content .grid .item.instep {
         background: url(/images/instep.jpg) no-repeat left top;
-        background-size: 125%;
+        background-size: 133%;
         transition: background .75s, box-shadow .5s;
         transition-timing-function: var(--ease-in-quad); }
         section .content .grid .item.instep:hover {
           background: url(/images/instep-hover.jpg) no-repeat left top;
-          background-size: 125%; }
+          background-size: 133%; }
       section .content .grid .item.cu-emp {
         background: url(/images/cu-boulder.jpg) no-repeat center top;
-        background-size: 125%;
+        background-size: 133%;
         transition: background .75s, box-shadow .5s;
         transition-timing-function: var(--ease-in-quad); }
         section .content .grid .item.cu-emp:hover {
           background: url(/images/cu-boulder-hover.jpg) no-repeat center top;
-          background-size: 125%; }
+          background-size: 136%; }
+      section .content .grid .item.sas {
+        background: url(/images/sas.jpg) no-repeat center top;
+        background-size: 133%;
+        transition: background .75s, box-shadow .5s;
+        transition-timing-function: var(--ease-in-quad); }
+        section .content .grid .item.sas:hover {
+          background: url(/images/sas-hover.jpg) no-repeat center top;
+          background-size: 136%; }
+      section .content .grid .item.vive-slim {
+        background: url(/images/vive-slim.jpg) no-repeat center top;
+        background-size: 133%;
+        transition: background .75s, box-shadow .5s;
+        transition-timing-function: var(--ease-in-quad); }
+        section .content .grid .item.vive-slim:hover {
+          background: url(/images/vive-slim-hover.jpg) no-repeat center top;
+          background-size: 136%; }
       section .content .grid .item .textbox {
         position: absolute;
         bottom: 50%;
@@ -551,6 +658,7 @@ section .content {
   height: 100%; }
   .detail-box .title {
     position: relative;
+    margin: 0;
     padding: 1rem 64px 1rem 1rem;
     background: #18326d;
     color: #fff;
@@ -560,20 +668,48 @@ section .content {
     letter-spacing: 1.5px; }
   .detail-box .detail-text {
     position: relative;
-    padding: 0 24px 32px 24px;
+    padding: 16px 24px 32px 24px;
     width: 100%;
     height: calc(100% - 85px);
     overflow: hidden;
     overflow-y: auto; }
+    .detail-box .detail-text .addl-media {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      position: relative;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      width: 100%; }
+      .detail-box .detail-text .addl-media button.more-media {
+        flex: 0 1 auto;
+        display: inline-block;
+        margin: 1rem 0;
+        padding: 1rem;
+        color: #fe8300;
+        border: 2px solid #fe8300;
+        font-weight: 500;
+        cursor: pointer;
+        transition: color .25s, background .25s;
+        transition-timing-function: var(--ease-out-quad); }
+        .detail-box .detail-text .addl-media button.more-media:hover {
+          color: #fff;
+          background: #fe8300; }
     .detail-box .detail-text .client span, .detail-box .detail-text .role span, .detail-box .detail-text .description span {
       font-weight: 700; }
     .detail-box .detail-text a {
       display: inline-block;
-      margin: 1rem 0;
+      margin: 1rem 1rem 1rem 0;
       padding: 1rem;
       color: #fe8300;
       border: 2px solid #fe8300;
       font-weight: 500;
+      text-align: center;
       transition: color .25s, background .25s;
       transition-timing-function: var(--ease-out-quad); }
       .detail-box .detail-text a:hover {
@@ -609,7 +745,7 @@ footer {
   section .content .grid {
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 2rem 0; }
+    padding: 0 0 2rem 0; }
     section .content .grid .item {
       flex: 0 1;
       flex-basis: calc(50% - 16px);
@@ -617,6 +753,23 @@ footer {
       min-height: 300px; } }
 
 @media all and (min-width: 750px) {
+  .logo-wrapper {
+    z-index: 1; }
+    .logo-wrapper a {
+      padding: 1rem 0 0 0; }
+  header {
+    margin: 0 auto 1rem auto;
+    width: 90%;
+    max-width: 1250px; }
+  header nav button.open ~ .nav-list {
+    position: absolute;
+    width: 100%;
+    height: auto; }
+  header nav {
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 0; }
   header nav button {
     display: none; }
   header .nav-list {
@@ -629,14 +782,19 @@ footer {
     border-radius: 0;
     transform: none; }
     header .nav-list.scrolled {
+      position: fixed;
       background: rgba(255, 255, 255, 0.88); }
+      header .nav-list.scrolled ul {
+        width: 90%;
+        max-width: 1250px;
+        margin: 0 auto; }
     header .nav-list ul {
       display: flex;
       justify-content: flex-end;
-      margin: 0 auto;
+      margin: 0 0 0 auto;
       padding: 0;
       width: 100%;
-      max-width: 1050px;
+      max-width: 1250px;
       text-align: left; }
       header .nav-list ul li {
         flex: 0 1 auto;
@@ -649,7 +807,7 @@ footer {
           display: block;
           position: relative;
           padding: 1rem;
-          color: #fff; }
+          color: #2a2a2a; }
           header .nav-list ul li a.darken {
             color: #18326d; }
         header .nav-list ul li:not(:last-child) a:after {
@@ -659,7 +817,7 @@ footer {
           bottom: 50%;
           width: 1px;
           height: 25%;
-          background: #fff;
+          background: #2a2a2a;
           transform: translateY(50%); }
         header .nav-list ul li:not(:last-child) a.darken:after {
           content: "";
@@ -677,6 +835,8 @@ footer {
     padding: 8rem 0 0 0;
     width: 75%;
     max-width: 1000px; }
+    .hero-text .title {
+      font-size: 3.25rem; }
   .shortcuts {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -700,8 +860,7 @@ footer {
         transform: translateY(50%); }
   section:not(.hero) .section-inner {
     margin: 0 auto;
-    padding: 4rem 0;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.35); }
+    padding: 2rem 0; }
     section:not(.hero) .section-inner .intro, section:not(.hero) .section-inner .about, section:not(.hero) .section-inner .contact {
       display: flex;
       flex-direction: row;
@@ -710,8 +869,8 @@ footer {
       align-content: center;
       align-items: center;
       margin: 0 auto;
-      width: 75%;
-      max-width: 1000px; }
+      width: 90%;
+      max-width: 1250px; }
       section:not(.hero) .section-inner .intro h1, section:not(.hero) .section-inner .about h1, section:not(.hero) .section-inner .contact h1 {
         flex: 0 1 auto;
         padding: 2rem 6rem 2rem 0;
@@ -730,26 +889,35 @@ footer {
           bottom: 50%;
           width: 2px;
           height: 80%;
-          background: #00fe89;
+          background: #00ffff;
           transform: translateY(50%); }
     section:not(.hero) .section-inner .about p:before {
-      background: #00ffff; }
+      background: #00fe89; }
     section:not(.hero) .section-inner .contact p:before {
       background: #fe8300; } }
+
+@media all and (min-width: 800px) {
+  .item.slide {
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+    -webkit-transition: -webkit-filter 0.25s ease;
+    transition: -webkit-filter 0.25s ease;
+    transition: filter 0.25s ease;
+    transition: filter 0.25s ease, -webkit-filter 0.25s ease; }
+  .owl-item.active.center > .item.slide {
+    -webkit-filter: brightness(1);
+    filter: brightness(1); } }
 
 @media all and (min-width: 1100px) {
   section .content .grid {
     justify-content: flex-start; }
     section .content .grid .item {
-      flex-basis: calc(33% - 48px);
-      margin: 24px; } }
+      flex-basis: calc(33% - 32px);
+      margin: 16px;
+      min-height: 380px; } }
 
 @media all and (min-width: 1300px) {
-  section:not(.hero) .section-inner {
-    padding: 7rem 0; }
-    section:not(.hero) .section-inner .intro h1 {
-      padding: 2rem 8rem 2rem 0; }
-    section:not(.hero) .section-inner .intro p:before {
-      left: -4rem; }
-  section .content .grid {
-    padding: 3rem 0; } }
+  section:not(.hero) .section-inner .intro h1 {
+    padding: 2rem 8rem 2rem 0; }
+  section:not(.hero) .section-inner .intro p:before {
+    left: -4rem; } }

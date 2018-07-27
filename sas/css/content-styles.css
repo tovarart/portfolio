@@ -1,0 +1,157 @@
+div.content-wrapper {
+    display: block;
+    position: relative;
+    margin-bottom: 2em;
+    float: left;
+    width: 100%;
+    background: url("../img/assets/resources.png");
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+}
+
+
+div.content-top {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    
+}
+
+@media screen and (max-width: 959px) {
+    div.content-top {
+        display: none;   
+    }
+    
+}
+
+    div.resources {
+        position: relative;
+        display: block;
+        float: left;
+        width: 100%;
+        margin-top: 11.5em;
+    }
+
+    @media screen and (max-width: 959px) {
+    div.resources {
+        margin-top: 0;   
+    }
+    
+    }
+
+        p.resource-intro {
+            display: block;
+            position: relative;
+            float: left;
+            font-family: antic, sans-serif;
+            color: white;
+            font-size: 1.5em;
+            letter-spacing: .1em;
+        }
+
+        @media screen and (max-width: 959px) {
+            p.resources-intro {
+                font-size: 1em;   
+            }
+    
+        }
+
+
+        div.source {
+            position: block;
+            display: block;
+            margin: 2px;
+            float:left;
+            width: 10em;
+            height: 10em;
+            border: 2px solid transparent;
+            background-color: rgb(217,255,192);
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+            a p.name {
+                display: block;
+                height: 100%;
+                margin: 0;
+                width: 100%;
+                color: rgba(26,31,27,1);
+            }
+
+                a p.name:hover {
+                    color: rgb(217,255,192);
+                }
+
+                div.source:hover {
+                    background-color: rgba(26,31,27,1);
+                    border-radius: 80px;
+                    border: 2px solid rgb(217,255,192);
+                }
+
+            p.name {
+                position: relative;
+                display: block;
+                width: 90%;
+                text-align: center;
+                font-size: 1.5em;
+                line-height: 1em;;
+                letter-spacing: .1em;
+                
+            }
+
+                span.set {
+                    display: block;
+                    padding-top: 2em;
+                    width: 5em;
+                    margin: 0 auto;
+                    
+                }
+
+    div.software {
+        position: relative;
+        display: block;
+        width: 100%;
+        clear: both;
+        float: left;
+        margin-top: 2em;
+    }
+
+    div.blogs-social {
+        position: relative;
+        display: block;
+        width: 100%;
+        clear: both;
+        float: left;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+                
+
+
+@media screen and (max-width: 959px) {
+    div.content-mobile {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        width: 90%;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

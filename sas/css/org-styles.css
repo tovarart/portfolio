@@ -1,0 +1,123 @@
+div.content {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    background: url("../img/assets/footer_lodyas.png");
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+}
+
+@media screen and (max-width: 959px) {
+    div.content {
+        display: none;   
+    }
+    
+    div.mobile-content {
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+    }
+    
+    section.section-top {
+        display: block;
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 1em;
+    }
+}
+
+    .section-top {
+        display: block;
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 10em;
+    }
+    
+    dt.section {
+        display: block;
+        position: relative;
+        width: 90%;
+        margin: 1em auto 0 auto;
+        clear: both;
+        background: url("../img/assets/title-back.png");
+        background-origin: border-box;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+    }
+
+    dl {
+        margin: 0;   
+    }
+
+        h1.title {
+            display: block;
+            position: relative;
+            width: 100%;
+            padding: 5px;
+            color: rgba(217,255,192,1);
+            letter-spacing: .05em;
+            line-height: 1.5em;   
+        }
+
+        h2.position {
+            display: block;
+            position: relative;
+            width: 100%;
+            padding: 5px;
+            font-family: antic, sans-serif;
+            line-height: 1.5em;
+            color: white;
+        }
+
+        dd.details {
+            display: block;
+            position: relative;
+            width: 90%;
+            margin: 0 auto;
+            
+        }
+
+            img.sas-img {
+                display: block;
+                position: relative;
+                padding: 0 20px 20px 0;
+            }
+
+            div.bio {
+                display: block;
+                position: relative;
+                font-family: antic, sans-serif;
+                color: white;
+                font-size: 1.5em;
+            }
+
+                h3.info {
+                    display: block;
+                    position: relative;
+                    margin: 0;
+                    width: 100%;
+                    font-family: antic, sans-serif;
+                    line-height: 1.5em;
+                    color: white;
+                }
+            
+                    p.bio-details {
+                        margin: 0;   
+                    }
+
+            ul.deets li {
+                display: block;
+                position: relative;
+                font-size: 1.5em;
+                font-family: antic, sans-serif;
+                color: white;
+                
+            }

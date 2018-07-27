@@ -1,0 +1,138 @@
+div.content {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    background: url("../img/assets/dark-wood.jpg");
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+}
+
+@media screen and (max-width: 959px) {
+    div.content {
+        display: none;   
+    }
+    
+    div.content-mobile {
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        
+    }
+}
+
+    div.container {
+        display: block;
+        position: relative;
+        width: 50%;
+        margin: 0 auto 2em auto;
+        
+    }
+
+    @media screen and (max-width: 959px) {
+        div.container {
+            width: 80%;
+            
+        }
+    }
+
+    h1.title {
+        letter-spacing: .1em;   
+    }
+
+    
+
+        form.sas-form {
+            display: block;
+            width: 100%;
+            margin-top: 10em;
+            color: white;
+        }
+
+         @media screen and (max-width: 959px) {
+            form.sas-form {
+                margin-top: 0;
+            
+            }
+        }
+
+            label.label-name {
+                font-family: antic, sans-serif;
+                line-height: 2em;
+                font-size: 1.5em;
+            }
+
+            .form-control {
+                width: 100%;
+                height: 3em;
+                border: 0;
+                border-radius: 5px;
+                font-size: 1.25em;
+                padding: 5px;
+            }
+
+                input#name,#email {
+                    width: 99%;
+                    
+                }
+
+                    input#name:focus,#email:focus {
+                        background-color: rgb(217,255,192);    
+                    }
+                
+                textarea#message {
+                    height: 5em;
+                    width: 99%;
+                    border: none;
+                    color: rgba(26,31,27,1);
+                }
+
+                    textarea#message:focus {
+                        background-color: rgb(217,255,192); 
+                    }
+
+                button, input, optgroup, select, textarea {
+                    color: rgba(26,31,27,1);
+                    font-family: antic, sans-serif;
+                }
+
+
+            div.buttons {
+                display: block;
+                position: relative;
+                float: right;
+                margin-top: 1em;
+                width: 100%;
+            }
+
+                button.btn {
+                    display: inline-block;
+                    position: relative;
+                    float: right;
+                    width: 7em;
+                    height: 2.5em;
+                    margin:0 0 0 10px;
+                    padding: 0;
+                    border: 0;
+                    background-color: rgb(217,255,192);
+                    text-align: center;
+                    transition: all 200ms ease-in-out 0s;
+                }
+
+                    button.btn:hover {
+                        color: rgb(217,255,192);
+                        background-color: rgba(26,31,27,1);
+                        border: 0;
+                        
+                    }
+
+
+
+
+
+
+
+

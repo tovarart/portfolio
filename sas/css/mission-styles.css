@@ -1,0 +1,84 @@
+div.content {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    background: url("../img/assets/students.jpg");
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+}
+
+    div.section {
+        display: block;
+        position: relative;
+        width: 90%;
+        margin: 10em auto 2em auto;
+    }
+
+        .title {
+            display: block;
+            position: relative;
+            margin-bottom: .3em;
+            font-size: 2em;
+            letter-spacing: .1em;
+            color: white;
+        }
+
+        .mission {
+            display: block;
+            position: relative;
+            width: 90%;
+            float: left;
+            font-family: antic, sans-serif;
+            letter-spacing: .05em;
+            font-size: 1.5em;
+            color: white;
+        }
+
+        div.sign-up {
+            display: block;
+            position: relative;
+            width: 100%;
+            clear: both;
+            float: left;
+            margin-bottom: 2em;
+        }
+
+            button.join {
+                display: block;
+                position: relative;
+                margin: 0 auto;
+                width: 5.25em;
+                height: 5em;
+                padding: 0;
+                border: 0;
+                border-radius: 3px;
+                font-size: 2em;
+                background-color: rgb(217,255,192);
+                text-align: center;
+                transition: all 200ms ease-in-out 0s;
+            }
+
+            a.btn-link {
+                color: rgba(26,31,27,1);
+            }
+
+                button.join:hover {
+                    color: rgb(217,255,192);
+                    width: 5em;
+                    height: 5em;
+                    background-color: rgba(26,31,27,1);
+                    border-radius: 80px;
+                    border: 2px solid rgb(217,255,192);
+                    
+                }
+
+                    button.join:hover a {
+                        color: rgb(217,255,192);
+                    }
+
+
+
+

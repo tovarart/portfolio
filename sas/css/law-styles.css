@@ -1,0 +1,158 @@
+div.mobile-content {
+    display: none;
+   
+}
+
+@media screen and (max-width: 959px) {
+        div.mobile-content {
+        display: block;
+        position: relative;
+        padding-bottom: 2em;
+        float: left;
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+div.content {
+    display: block;
+    position: relative;
+    padding-bottom: 2em;
+    float: left;
+    width: 100%;
+    background: url("../img/assets/laws-back.jpg");
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 959px) {
+    div.content {
+        display: none;   
+    }
+
+}
+
+    div.section-top {
+        display: block;
+        position: relative;
+        width: 90%;
+        margin: 11.5em auto 0 auto;
+    }
+    
+    @media screen and (max-width: 959px) {
+        div.section-top {
+            display: block;
+            position: relative;
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+
+        .title {
+            display: block;
+            position: relative;
+            margin-bottom: .3em;
+            font-size: 2em;
+            letter-spacing: .1em;
+            color: white;
+        }
+    
+        @media screen and (max-width: 959px) {
+            .title {
+                margin-top: 0;
+            }
+        }
+
+        .title-2 {
+            display: block;
+            position: relative;
+            margin-bottom: .3em;
+            font-size: 1.75em;
+            letter-spacing: .1em;
+            color: white;
+        }
+
+        p.intro {
+            display: block;
+            position: relative;
+            margin: 0;
+            width: 90%;
+            float: left;
+            font-family: antic, sans-serif;
+            font-size: 1.25em;
+            color: white;
+        }
+
+            a.write-us {
+                color: rgb(217,255,192);
+               
+                border-radius: 10px;
+                background-color: transparent;
+                -webkit-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+            }
+
+
+                a.write-us:hover {
+                    color: rgba(26,31,27,1);
+                    background-color: rgba(217,255,192,.75);
+                    -webkit-box-shadow: 0px 0px 1px 1px rgba(217,255,192,.75);
+                    box-shadow: 0px 0px 10px 10px rgba(217,255,192,.75);
+                }
+
+            li.b-item {
+                display: block;
+                position: relative;
+                margin: 0;
+                width: 100%;
+                float: left;
+                font-family: antic, sans-serif;
+                font-size: 1.25em;
+                color: white;
+            }
+
+            dt.b-item {
+                
+                position: relative;
+                margin: 0;
+                width: 100%;
+                float: left;
+                font-family: antic, sans-serif;
+                font-size: 1.25em;
+                color: white;
+                cursor: pointer;
+            }
+
+                dd.details {
+                    display: block;
+                    position: relative;
+                    margin: 0 2em;
+                    width: 100%;
+                    float: left;
+                    font-family: antic, sans-serif;
+                    font-size: 1.25em;
+                    color: white;
+                }
+
+    div.b-body {
+        display: block;
+        position: relative;
+        width: 90%;
+        margin: 3.5em auto 0 auto;
+        color: white;
+    }
+
+
+
+
+
+
+
+
+
+
+
