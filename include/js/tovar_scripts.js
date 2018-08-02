@@ -89,7 +89,6 @@ $(document).ready(function() {
     });
 
     $('.slider').owlCarousel({
-        loop: false,
         margin: 10,
         center: true,
         loop: true,
@@ -103,6 +102,26 @@ $(document).ready(function() {
             },
             800: {
                 items: 2,
+                nav: true
+            }
+        }
+    });
+    
+    $('.single-slider').owlCarousel({
+        loop: false,
+        margin: 10,
+        center: true,
+        loop: false,
+        animateOut: 'fadeOut',
+        responsiveClass: true,
+        autoHeight: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: true
+            },
+            800: {
+                items: 1,
                 nav: true
             }
         }

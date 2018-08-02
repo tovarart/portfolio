@@ -183,8 +183,8 @@ main {
   width: 90%;
   padding: 10px;
   max-width: 800px;
-  min-height: 20rem;
-  max-height: 82vh;
+  min-height: 40vh;
+  max-height: 90vh;
   background: #fff;
   overflow: hidden;
   overflow-y: auto;
@@ -218,9 +218,20 @@ main {
   overflow-y: auto; }
   .item.slide img {
     display: block;
-    width: 100%; }
+    width: 100%;
+    max-width: 680px; }
   .item.slide p {
     padding: 16px 0; }
+
+#viveSlim .item.slide img {
+  margin: 0 auto; }
+
+#crow .item.slide img {
+  margin: 0 auto;
+  width: 62.5%; }
+
+.single-slider .item.slide p {
+  text-align: center; }
 
 header {
   position: relative;
@@ -425,7 +436,7 @@ header {
     letter-spacing: 1px; }
 
 section:not(.hero) {
-  background: #dedede; }
+  background: #f1f1f1; }
   section:not(.hero) .section-inner {
     padding: 2rem 1rem;
     background: #fff;
@@ -452,7 +463,7 @@ section:not(.hero) {
 #contact .section-inner h1:after {
   background: #00ffff; }
 
-.section-inner .intro p span {
+.section-inner p span {
   display: block;
   margin: 0 0 8px 0;
   font-weight: 600;
@@ -595,7 +606,7 @@ section .content {
         transition-timing-function: var(--ease-in-quad); }
         section .content .grid .item.instep:hover {
           background: url(/images/instep-hover.jpg) no-repeat left top;
-          background-size: 133%; }
+          background-size: 136%; }
       section .content .grid .item.cu-emp {
         background: url(/images/cu-boulder.jpg) no-repeat center top;
         background-size: 133%;
@@ -613,13 +624,21 @@ section .content {
           background: url(/images/sas-hover.jpg) no-repeat center top;
           background-size: 136%; }
       section .content .grid .item.vive-slim {
-        background: url(/images/vive-slim.jpg) no-repeat center top;
-        background-size: 133%;
+        background: url(/images/vive-slim.jpg) no-repeat center;
+        background-size: 130%;
         transition: background .75s, box-shadow .5s;
         transition-timing-function: var(--ease-in-quad); }
         section .content .grid .item.vive-slim:hover {
-          background: url(/images/vive-slim-hover.jpg) no-repeat center top;
-          background-size: 136%; }
+          background: url(/images/vive-slim-hover.jpg) no-repeat center;
+          background-size: 133%; }
+      section .content .grid .item.crow {
+        background: url(/images/crow.jpg) no-repeat center;
+        background-size: 130%;
+        transition: background .75s, box-shadow .5s;
+        transition-timing-function: var(--ease-in-quad); }
+        section .content .grid .item.crow:hover {
+          background: url(/images/crow-hover.jpg) no-repeat center;
+          background-size: 133%; }
       section .content .grid .item .textbox {
         position: absolute;
         bottom: 50%;

@@ -234,8 +234,8 @@ main {
     width: 90%;
     padding: 10px;
     max-width: 800px;
-    min-height: 20rem;
-    max-height: 82vh;
+    min-height: 40vh;
+    max-height: 90vh;
     background: #fff;
     overflow: hidden;
     overflow-y: auto;
@@ -271,10 +271,21 @@ main {
     img {
         display: block;
         width: 100%;
+        max-width: 680px;
     }
     p {
         padding: 16px 0;
     }
+}
+#viveSlim .item.slide img {
+    margin: 0 auto;
+}
+#crow .item.slide img {
+    margin: 0 auto;
+    width: 62.5%;
+}
+.single-slider .item.slide p {
+    text-align: center;
 }
 header {
     position: relative;
@@ -537,7 +548,7 @@ header {
 }
 
 section:not(.hero) {
-    background: $light-neutral;
+    background: #f1f1f1;
     .section-inner {
         padding: 2rem 1rem;
         background: $white;
@@ -572,7 +583,7 @@ section:not(.hero) {
         background: $aqua-blue;
     }
 }
-.section-inner .intro p span {
+.section-inner p span {
     display: block;
     margin: 0 0 8px 0;
     font-weight: 600;
@@ -735,7 +746,7 @@ section .content {
                 transition-timing-function: var(--ease-in-quad);
                 &:hover {
                     background: url(/images/instep-hover.jpg) no-repeat left top;
-                    background-size: 133%;
+                    background-size: 136%;
                 }
             }
             &.cu-emp {
@@ -759,13 +770,23 @@ section .content {
                 }
             }
             &.vive-slim {
-                background: url(/images/vive-slim.jpg) no-repeat center top;
-                background-size: 133%;
+                background: url(/images/vive-slim.jpg) no-repeat center;
+                background-size: 130%;
                 transition: background .75s, box-shadow .5s;
                 transition-timing-function: var(--ease-in-quad);
                 &:hover {
-                    background: url(/images/vive-slim-hover.jpg) no-repeat center top;
-                    background-size: 136%;
+                    background: url(/images/vive-slim-hover.jpg) no-repeat center;
+                    background-size: 133%;
+                }
+            }
+            &.crow {
+                background: url(/images/crow.jpg) no-repeat center;
+                background-size: 130%;
+                transition: background .75s, box-shadow .5s;
+                transition-timing-function: var(--ease-in-quad);
+                &:hover {
+                    background: url(/images/crow-hover.jpg) no-repeat center;
+                    background-size: 133%;
                 }
             }
             .textbox {
