@@ -626,6 +626,7 @@ section .content {
             background: $white;
             box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16) , 0px 3px 6px rgba(0, 0, 0, 0.23);
             overflow: hidden;
+
             > button {
                 display: block;
                 position: absolute;
@@ -698,6 +699,15 @@ section .content {
             }
             &:hover {
                box-shadow: 2px 9px 16px rgba(0, 0, 0, 0.28), -2px 16px 24px rgba(0, 0, 0, 0.28);
+
+               .textbox {
+                    h3, h4 {
+                        color: $black;
+                    }
+                    h3:after {
+                        background: $black;
+                    }
+                }
             }
             &.triangle {
                 background: url(/images/triangle.jpg) no-repeat left top;
@@ -806,6 +816,7 @@ section .content {
                 width: 90%;
                 transform: translate(50%, 50%);  
                 color: $white;
+                transition: color .12s ease-in;
                 h3 {
                     display: block;
                     position: relative;
