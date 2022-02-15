@@ -99,7 +99,7 @@ $(document).ready(function() {
     $('.slider').owlCarousel({
         margin: 10,
         center: true,
-        loop: true,
+        loop: false,
         animateOut: 'fadeOut',
         responsiveClass: true,
         autoHeight: true,
