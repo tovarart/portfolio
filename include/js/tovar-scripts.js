@@ -82,7 +82,7 @@ $(document).ready(function() {
     for (let b of moreBtns) {
         b.addEventListener('click', function(event) {
             let siblingDIVs = b.parentElement.querySelectorAll('div');
-            if (this.classList.contains(close)) {
+            if (this.classList.contains('close')) {
                 this.classList.remove('close');
                 siblingDIVs.forEach(el=> {
                     el.classList.remove('down');
