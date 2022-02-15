@@ -567,6 +567,14 @@ section .content {
           top: 105%; }
       section .content .grid .item:hover {
         box-shadow: 2px 9px 16px rgba(0, 0, 0, 0.28), -2px 16px 24px rgba(0, 0, 0, 0.28); }
+      section .content .grid .item.triangle {
+        background: url(/images/triangle.jpg) no-repeat left top;
+        background-size: 133%;
+        transition: background .75s, box-shadow .2s;
+        transition-timing-function: var(--ease-in-quad); }
+        section .content .grid .item.triangle:hover {
+          background: url(/images/triangle-hover.jpg) no-repeat left top;
+          background-size: 136%; }
       section .content .grid .item.hartfordline {
         background: url(/images/hartfordline.jpg) no-repeat left top;
         background-size: 133%;

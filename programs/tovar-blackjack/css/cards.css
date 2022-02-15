@@ -1,0 +1,83 @@
+﻿
+:focus {
+    outline: -webkit-focus-ring-color auto 1px;
+}
+.wrapper {
+    display: block;
+    margin: 0 auto;
+    padding: 2rem 0;
+    width: 90%;
+    max-width: 1000px;
+}
+.controls {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 1rem 0 0 0;
+    width: 100%;
+    max-width: 460px;
+}
+.controls .btn {
+    display: block;
+    padding: 12px 1rem;
+    border: 2px solid #55575d;
+    background: #fff;
+    letter-spacing: 1px;
+    transition: color .25s ease, background .25s ease;
+}
+.controls .btn:hover {
+    color: #fff;
+    background: #55575d;
+}
+.game-table {
+    display: flex;
+    flex-direction: column;
+}
+.group {
+    margin: 2rem 0;
+}
+.hand {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    background: #55575d;
+}
+.title {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+.hand > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin: 8px;
+    width: 45%;
+    max-width: 220px;
+    min-height: 300px;
+    border: 2px solid #fff;
+}
+.hand > div h2 {
+    flex: 0 1 auto;
+    color: #fff;
+    text-align: center;
+}
+.hand > div h2:nth-child(1) {
+    font-size: 7rem;
+}
+.clubs {
+    background: url(../images/clubs.svg) no-repeat center;
+    background-size: cover;
+}
+.hearts {
+    background: url(../images/hearts.svg) no-repeat center;
+    background-size: cover;
+}
+.spades {
+    background: url(../images/spades.svg) no-repeat center;
+    background-size: cover;
+}
+.diamonds {
+    background: url(../images/diamonds.svg) no-repeat center;
+    background-size: cover;
+}
