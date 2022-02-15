@@ -75,18 +75,26 @@ $(document).ready(function() {
             }
         });
 
-    var moreBtn = $('button.more-button');
+    var moreBtn = $('.more-button');
 
-    moreBtn.each(function() {
-        $(this).on('click', function(event) {
-            //           $(this).addClass('close').siblings('div').addClass('down');
-            if ($(this).hasClass('close')) {
-                $(this).removeClass('close').siblings('div').removeClass('down');
+    let moreBtns = document.querySelectorAll('.more-button');
+
+    for (let b of moreBtns) {
+        b.addEventListener('click', function(event) {
+            let siblingDIVs = b.parentElement.querySelectorAll('div');
+            if (this.classList.contains(close)) {
+                this.classList.remove('close');
+                siblingDIVs.forEach(el=> {
+                    el.classList.remove('down');
+                });
             } else {
-                $(this).addClass('close').siblings('div').addClass('down');
+                this.classList.add('close');
+                siblingDIVs.forEach(el=> {
+                    el.classList.add('down');
+                });
             }
         });
-    });
+    }
 
     $('.slider').owlCarousel({
         margin: 10,
